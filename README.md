@@ -1,8 +1,11 @@
 # multi-tech
 
+Node.js --> https://nodejs.org/es/download/ 
 
-// Node.js --> https://nodejs.org/es/download/
-// Docker Desktop --> https://www.docker.com/products/docker-desktop
-// MySQLWorkbench --> https://dev.mysql.com/downloads/workbench/
-// MongoCompass --> https://www.mongodb.com/try/download/compass
+Docker Desktop --> https://www.docker.com/products/docker-desktop
+
+MySQLWorkbench --> https://dev.mysql.com/downloads/workbench/
+
+MongoCompass --> https://www.mongodb.com/try/download/compass
+
 
