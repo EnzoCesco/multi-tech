@@ -10,6 +10,8 @@ MySQLWorkbench --> https://dev.mysql.com/downloads/workbench/
 
 MongoCompass --> https://www.mongodb.com/try/download/compass
 
-# CMD
-
 npm i -g @nestjs/cli
+
+# Server Start
+
+Nest --> npm run start:dev
