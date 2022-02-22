@@ -1,4 +1,6 @@
-# multi-tech
+# Multi-tech
+
+# Installers
 
 Node.js --> https://nodejs.org/es/download/ 
 
@@ -8,4 +10,6 @@ MySQLWorkbench --> https://dev.mysql.com/downloads/workbench/
 
 MongoCompass --> https://www.mongodb.com/try/download/compass
 
+# CMD
 
+npm i -g @nestjs/cli
