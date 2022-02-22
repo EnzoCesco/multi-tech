@@ -1,0 +1,41 @@
+
+version: "1"
+
+services:
+
+  # MongoDB
+  mongodb:
+    image: mongo:latest
+    environment:
+        # provide your credentials here
+        - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+        - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+        - MONGO_INITDB_DATABASE=${MONGO_INITDB_DATABASE}
+        - TZ=America/Montevideo
+    command: mongod
+    container_name: mongoDB
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb:/data/db
+
+  # MySQL
+  mysqldb:
+    image: mysql:latest
+    environment:
+      # provide your credentials here
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - TZ=America/Montevideo
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: mysqlDB
+    ports:
+      - 3706:3306
+    volumes:
+      - mysqldb:/var/lib/mysql
+
+volumes:
+  mongodb: {}
+  mysqldb: {}
+
+
