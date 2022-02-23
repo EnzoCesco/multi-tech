@@ -43,7 +43,7 @@ services:
         context: ./server/nest
         dockerfile: Dockerfile
         target: development
-      command: nest build --webpack --webpackPath webpack-hmr.config.js --watch
+      command: npm run start:dev
       ports:
           - 3000:3000
           - 9229:9229
@@ -53,5 +53,5 @@ services:
 volumes:
   mongodb: {}
   mysqldb: {}
-
+  nest: {}
 
