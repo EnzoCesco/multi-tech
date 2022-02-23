@@ -1,4 +1,4 @@
-FROM node:14-alpine As develop
+FROM node:16.14-alpine3.14 As develop
 WORKDIR /app
 COPY . .
 RUN npm install --only=dev
