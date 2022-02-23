@@ -34,6 +34,22 @@ services:
     volumes:
       - mysqldb:/var/lib/mysql
 
+  # Nest
+
+  nest:
+      container_name: nestjs
+      image: nestjs-api:dev
+      build:
+        context: ./server/nest
+        dockerfile: Dockerfile
+        target: development
+      command: nest build --webpack --webpackPath webpack-hmr.config.js --watch
+      ports:
+          - 3000:3000
+          - 9229:9229
+      volumes:
+      - ./server/nest:/app
+
 volumes:
   mongodb: {}
   mysqldb: {}
