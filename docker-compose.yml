@@ -38,12 +38,12 @@ services:
 
   nest:
       container_name: nestjs
-      image: nestjs-api:dev
+      image: nestjs-api:${TAG}
       build:
         context: ./server/nest
         dockerfile: Dockerfile
         target: ${TAG}
-      command: npm run start:dev
+      command: npm run start:${TAG}
       ports:
           - 3000:3000
           - 9229:9229
