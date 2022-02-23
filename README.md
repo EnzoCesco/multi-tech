@@ -14,4 +14,4 @@ npm i -g @nestjs/cli
 
 # Server Start
 
-Nest --> npm run start:dev
+Nest --> npm run start:develop

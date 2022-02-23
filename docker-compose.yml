@@ -42,7 +42,7 @@ services:
       build:
         context: ./server/nest
         dockerfile: Dockerfile
-        target: development
+        target: ${TAG}
       command: npm run start:dev
       ports:
           - 3000:3000
