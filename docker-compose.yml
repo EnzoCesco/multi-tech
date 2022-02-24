@@ -89,9 +89,26 @@ services:
       volumes:
       - ./server/express:/app
 
+  # DotNet
+
+  dotnet:
+      container_name: dotnet
+      image: dotnet-api:${TAG}
+      environment:
+        ASPNETCORE_ENVIRONMENT: Docker-${TAG}
+        ASPNETCORE_URLS: http://0.0.0.0:5000
+        DOTNET_USE_POLLING_FILE_WATCHER: 1
+      build:
+        context: ./server/dotNet/dotNet
+        dockerfile: Dockerfile
+        target: ${TAG}
+      volumes:
+      - ./server:/app
+
 volumes:
   mongodb: {}
   mysqldb: {}
   postgres: {}
   nest: {}
-
+  express: {}
+  dotNet: {}
