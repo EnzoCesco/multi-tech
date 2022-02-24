@@ -12,6 +12,3 @@ MongoCompass --> https://www.mongodb.com/try/download/compass
 
 npm i -g @nestjs/cli
 
-# Server Start
-
-Nest --> npm run start:develop
